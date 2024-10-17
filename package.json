@@ -1,0 +1,16 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -w",
+    "start": "nodemon ./build/app.js",
+    "dev": "concurrently \"tsc -w\" \"nodemon build/app.js\""
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@algorithm.ts/gcd": "^4.0.4"
+  }
+}
