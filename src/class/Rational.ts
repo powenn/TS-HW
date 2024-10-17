@@ -36,15 +36,15 @@ export class Rational {
     }
 
     equals(r: Rational): boolean {
-        const _r = this.normalize();
-        const nor_r = r.normalize();
+        const this_r = this.normalize();
+        const _r = r.normalize();
+
+        const this_n = this_r.getNumerator();
+        const this_d = this_r.getDenominator();
 
         const _r_n = _r.getNumerator();
         const _r_d = _r.getDenominator();
-
-        const nor_r_n = nor_r.getNumerator();
-        const nor_r_d = nor_r.getDenominator();
-        return _r_n == nor_r_n && _r_d == nor_r_d;
+        return this_n == _r_n && this_d == _r_d;
     }
 
     static _parseRational(n_arr: Array<char>, d_arr: Array<char>): Rational {
